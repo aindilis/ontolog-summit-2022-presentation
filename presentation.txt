@@ -1,0 +1,2167 @@
+PERSONAL EMERGENCY MANAGEMENT using the FREE LIFE PLANNER
+
+By Andrew John Dougherty
+
+---
+
+Formalized Research Database:
+
+Cluster, Study and Apply
+
+(FRDCSA) Project
+
+---
+
+Ontolog Summit 2022
+
+Track 3: Environment Disasters
+
+April 20th, 2022
+
+---
+
+This talk is in memory of:
+
+My beloved sister Ann, whose tragic death when I was 10 years old
+drives to this day my unswerving commitment to the completion of this
+technology.
+
+Christina Taft's beloved mother, Victoria Taft, whose tragic death in
+the Paradise, California wildfire in 2018 drives her tireless
+commitment to emergency management technology.
+
+---
+
+## SECTION
+
+Introduction
+
+===
+---
+
+'Predicting, Monitoring, Mitigating and Managing' (Environmental)
+Disasters
+
+===
+
+This talk concerns 'predicting, monitoring, mitigating and managing'
+(environmental) disasters.
+
+---
+
+<pre>
+Example Environmental Disasters:
+ 
+  • Climate change
+  • Environmental pollution
+  • Wildfires
+  • Floods
+  • Habitat loss
+</pre>
+
+---
+
+I suggest what I (dryly) term a 'draconian solution' (i.e. reducing the
+problem to a harder problem).
+
+---
+
+As an analogy, I 'reduce' the environmental disaster problem to general
+life planning, and put forth a satisficing implementation called the
+Free Life Planner aka FLP as a solution,
+
+---
+
+and demonstrate how it applies in the specific case of
+handling environmental disasters.
+
+---
+
+Preview of the Free Life Planner (FLP)
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/images/flp-screenshots-1.png
+
+===
+
+Here are some (outdated) screenshots of services that the Free Life
+Planner provides.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/images/flp-screenshots-2.png
+
+===
+
+This talk is going to focus on this intelligent personal assistant
+which will help individuals to take control of every aspect of their
+lives, including but not limited to emergency preparedness.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/clips/iem-20220327-cycle-weekly3.mp4#t=40,50
+
+===
+
+This video shows one temporal planning subsystem called Interactive
+Execution Monitor version 2 (a.k.a. IEM2), which is part of the
+backend behind FLP.  There is a corresponding web front end to this
+planning system.
+
+---
+
+## SECTION
+
+The Problem of Environmental Disasters
+
+===
+---
+
+<pre>
+Some dimensions of the problem:
+ 
+  • Prevention
+    • Reducing individual contribution
+      • E.g. committing to recycling, lowering
+        electrical usage, etc
+    • Reducing collective contribution
+      • E.g. preventing industrial accidents
+  • Management
+    • Protecting people from disasters
+      • Notification and evacuation
+  • Sociological implications
+    • Increased exposure of the poor
+</pre>
+
+===
+
+There are many dimensions to the problem of environmental disasters.
+
+---
+
+In July of 2021 I wrote Al Gore regarding FLP, describing how one
+use-case dealt with helping people to reduce their environmental
+footprint.
+
+---
+
+The use-case could be implemented via a particular kind of intelligent
+tutoring system, which elicits from the user all the relevant
+behaviors they engage in that affect their environmental footprint.
+
+---
+
+FLP would then check whether or not these behaviors conform to (local)
+best practices in its rulebase.  When they do not, the system would
+attempt to act as an accountability partner to help keep them on track
+towards modifying their behaviors.
+
+---
+
+## https://en.wikipedia.org/wiki/2004_Indian_Ocean_earthquake_and_tsunami/
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/images/tsunami.png
+
+===
+
+A second example of an environmental disaster that could have been
+mitigated is the 2004 Indian Ocean earthquake and tsunami, which took
+over 200,000 lives.  A cellphone warning system could have alerted and
+directed many more people to safety.  This tragedy was disheartening
+because, although an idea is not an implementation, at that time I had
+been campaigning 2 years with no discernable progress for this system.
+22 years on, although it hasn't yet made its impact, much technical
+progress on FLP fortunately has been made.
+
+---
+
+https://frdcsa.org/~andrewdo/writings/artificialintelligence-second-half.txt
+
+===
+
+In 2003, I wrote an article on general purpose accident avoidance
+using Cyc and sensor networks.  This article talked about using Cyc
+and KBS systems to make life-saving inferences.  Although it describes
+a counterfactual scenario where a child using this system avoids being
+hit by a train, it bears strong resemblance to the problem of sending
+messages telling people within certain spatial regions to alter their
+behavior, such as to help move themselves, others nearby and loved
+ones to higher ground to avoid a tsunami.
+
+---
+
+https://en.wikipedia.org/wiki/2021_European_floods/
+
+===
+
+Or, moving to higher ground to avoid flash floods.  The July 2021
+floods in many European countries including Germany were an
+illustration of unprecedented weather saturating the emergency
+response coordination.
+
+---
+
+These are a few examples of where FLP would be useful.  However, being
+a life planner, it is intended to adequately manage many other
+situations and types of events.
+
+---
+
+<pre>
+Some General Use Cases for FLP:
+ 
+  • Natural and Man-made Disasters
+    • Pandemics
+    • Climate Change
+  • Conditions
+    • Poverty
+    • Homelessness
+    • Disability
+    • Illness
+    • Domestic violence
+    • etc
+</pre>
+
+===
+
+Here are some of the use cases for FLP.
+
+---
+
+## FIXME: Strengthen
+
+https://owntracks.org/booklet/
+
+===
+
+For positional reasoning, FLP currently integrates with the Own Tracks
+system, part of FLP's Location Logic subsystem.  OwnTracks tracks
+users' location via cellphone, and is free/libre software.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/images/flp-subsystems.png
+
+===
+
+The FLP GitHub pages list many of its current subsystems, which are in
+various states of completion.
+
+---
+
+## SECTION
+
+The Free Life Planner (FLP)
+
+===
+---
+
+<pre>
+About:
+ 
+  • Free/Libre Social Friendly A.I.
+  • For day to day life
+    • Generating and walking through plans
+    • Behavior modification
+  • For emergencies
+    • Emergency preparedness
+    • Emergency management
+</pre>
+
+===
+
+I will now focus on how to create 'Free-Libre Social Friendly
+Artificial Intelligence' in service of the problems of day to day
+living, including planning and behavior modification, and also
+emergencies, through emergency preparedness and emergency management.
+This can be achieved through systems integration and software
+applications of Knowledge-Based Systems.
+
+---
+
+<pre>
+Purpose:
+ 
+  • Need Intelligent Personal Assistant
+  • Ensure 'Last Mile Delivery' of services
+  • Provides public health and policy data
+    • With fine-grained consent or
+      secure multi-party computation
+</pre>
+
+===
+
+There is a need for an intelligent personal assistant which is with
+the user in the trenches, enabling the last mile delivery of salient
+guidance, and conversely uploading evidence for public health.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/clips/iem2-wsm.mp4#t=0,22
+
+===
+
+FLP is intended to 'eventually always' meet this need.  FLP is a
+mobile friendly web application, which plans preactively, proactively
+and reactively - at multiple levels of granularity - in order to both
+survive and thrive on a daily basis, and prepare for managing
+emergencies when necessary.
+
+---
+
+<pre>
+Goals of the talk:
+ 
+  • Convince the audience:
+    • How zero marginal cost (ZMC) + libre + gratis
+      properties enable ~8,000,000,000 potential FLP
+      users
+      • Precedent: GNU/Linux
+    • That 'FLP could help save lives, improve quality
+      of life and reduce suffering'
+    • To enlist your support in completing,
+      releasing and promoting FLP and FRDCSA
+</pre>
+
+===
+
+The purpose of the talk is threefold.  First, to illustrate that
+because free/libre software is freely redistributable and can assist
+people indirectly, whether or not they have a computer, it has the
+potential to offer help to almost everyone on the planet, in the same
+way that GNU/Linux could.  Second, to convince you that FLP could in
+fact help save lives, improve quality of life, and reduce intense
+suffering.  Third, to enlist your active support of these projects.
+
+---
+
+<pre>
+Disclaimers:
+ 
+  • I am partially self-taught (so a lot of what I
+    say here hasn't been independently verified)
+  • I have difficulty summarizing
+  • First video generated by my PresGen system
+  • Apologize for the use of Text-To-Speech
+</pre>
+
+===
+
+Some disclaimers.
+
+---
+
+<pre>
+Suggestions:
+ 
+  • Please re-watch and occasionally pause
+  • Please type any questions into the chat
+    which I can then answer
+</pre>
+
+===
+
+And some suggestions.  There is more relevant information than I am
+able to summarize contained in this presentation, so I recommend
+re-watching the video and occasionally pausing it as needed.
+
+---
+
+<pre>
+Outline of talk:
+ 
+  • Introduction
+  • The Problem of Environmental Disasters
+  • The Free Life Planner (FLP)
+  • Plan-Monitor
+  • Jason/AgentSpeak(L)
+  • 'Predicting, Monitoring, Mitigating and Managing' Threats
+  • The WOPR System
+  • Prepping and Survivalism
+  • The PrologCyc Discipline
+  • E2C, NLU and NLU-MF and Rule Mining
+  • A.I. Planning Technologies in FLP
+  • Releasing FLP
+  • The FRDCSA Project
+  • Releasing the FRDCSA
+  • FRDCSA Theory
+</pre>
+
+===
+
+Outline of the talk.
+
+---
+
+## https://www.youtube.com/watch?v=mk35eReQKvo
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/clips/Paradise-Camp-Fire-Evacuation---11-13-2020---v1-mk35eReQKvo.mkv#t=60,74
+
+===
+
+This video by Paul Fierro shows his excellent simulation of a
+counterfactual evacuation of Paradise, California from the Camp Fire
+that started on November 8, 2018.
+
+One way to frame the problem of emergency management focuses on the
+'global', 3rd-person, top-down, macro perspective.
+
+---
+
+https://upload.wikimedia.org/wikipedia/commons/1/19/Woolsey_Fire_evacuation_from_Malibu_on_November_9%2C_2018.jpg
+
+===
+
+Another way to frame the problem is to focus on the "local,"
+1st-person, bottom-up, micro perspective.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/clips/plan-monitor-cell-phone-editted.mp4#t=0,15
+
+===
+
+This can be achieved for instance via a mobile hands-free plan
+monitoring application, such as the one I developed shown here.
+
+---
+
+https://live.staticflickr.com/4465/37560568716_61d7508169_b.jpg
+
+===
+
+I use a fisheye lens here as a metaphor for this 1st person
+perspective.  FLP operates from this individual perspective, which may
+be federated to form a community, and thus focuses on the community
+perspective as well.
+
+---
+
+"File:Woolsey Fire evacuation from Malibu on November 9, 2018.jpg" by
+Cyclonebiskit is marked with CC BY-SA 4.0. To view the terms, visit
+https://creativecommons.org/licenses/by-sa/4.0/?ref=openverse
+
+===
+---
+
+"Canyon Fire 2" by /\ltus is marked with CC BY-NC-ND 2.0. To view the terms, visit https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=openverse 
+
+===
+---
+
+## SECTION
+
+Plan-Monitor
+
+===
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/behavior-tree-task-manager-for-covid-19-1-2.ppm.jpg
+
+===
+
+Originally, I was to give a presentation on the Pandemic Track
+regarding my COVID-19 Behavior Tree paper that recommended developing
+a Prolog-based 'plan monitoring system', but fell short of fully
+implementing one.  The plan monitoring system was conceived to help
+overcome the last mile delivery of efficacious knowledge and
+procedures for reducing the spread of and mitigating the effect of
+COVID-19.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/behavior-tree-task-manager-for-covid-19-3-4.ppm.jpg
+
+===
+
+Unfortunately this paper, written at the very beginning of the
+pandemic, really missed the mark. I had not predicted that a sizable
+percentage of the population would not be willing to adhere to
+guidelines for measures like wearing masks or being vaccinated.  Any
+successful disaster management strategy must therefore account for the
+human factors present.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/behavior-tree-task-manager-for-covid-19-5.ppm.jpg
+
+=== 
+
+Nevertheless, finishing the original Plan-Monitor would still be of
+specific use to those who need extra layers of security during the
+pandemic, for instance the immunocompromised and their associates.  As
+well, Plan-Monitor is of general use for interactively walking users
+through plans.
+
+---
+
+<pre>
+# As root
+export URL='https://github.com/aindilis'
+cpanm $URL/plan-monitor/raw/master/plan-monitor-0.01.tar.gz
+cpanm $URL/perl-btpm/raw/master/perl-btpm-0.01.tar.gz
+cpanm $URL/perl-btsk/blob/master/perl-btsk-0.01.tar.gz 
+</pre>
+
+===
+
+So I persisted and ultimately developed a Perl-based Plan-Monitor
+system, in addition to the unfinished Prolog-based system, which can
+be installed using the commands shown, but which did not depend on any
+unreleased FRDCSA code.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/clips/plan-monitor-voice.webm#t=0,30
+
+===
+
+Thus, Plan-Monitor is a mobile-friendly WebUI for walking users
+through tasks such as going to the doctor, the grocery, receiving
+mail, etc.  Here it is in operation.  Some important features shown
+here includes the ability to branch on plan failure and hands-free
+operation.
+
+---
+
+<pre>
+Strengths of Plan-Monitor:
+ 
+  • Based on behavior trees
+  • Real-time (including WebSocket-based WebUI) 
+  • Ability to handle nonlinear/branching/contingent
+    plans
+  • 'Imperative reactive planning-with-sensing, and
+    execution'
+  • Hands-free operation
+</pre>
+
+===
+
+Plan-Monitor has many strengths.
+
+---
+
+<pre>
+Limitations of Plan-Monitor:
+ 
+  • No concurrent tasks and plans
+  • No deliberation 
+  • Simple implementation
+  • Currently lacking more sophisticated
+    behavior tree features
+</pre>
+
+===
+
+However, Plan-Monitor also had some major limitations.
+
+---
+
+After asking the A.I. planning community, there appear to be few
+options for an (open-source) system like Plan-Monitor that can handle
+temporal, concurrent plans.
+
+---
+
+So I intend to fork plan-monitor and extend it to handle temporal
+concurrent plans via behavior trees, as a front-end, and handle the
+backend and merging of the concurrent plans using the previously
+mentioned Interactive Execution Monitor v2 (IEM2), more of which will
+be shown later.
+
+---
+
+<code language='simgen'>
+sanitize_surface(Person,Surface) ==>>
+        ensure_state(wearing_gloves(Person,_Gloves)),
+        true_state(in(Surface,Room)),
+        true_code(isa(Room,room)),
+        ensure_state(well_ventilated(Room)),
+        true_state(holding(Person,HouseholdCleaningSprayOrWipe)),
+        true_code(isa(HouseholdCleaningSprayOrWipe,cleaningSpray)),
+        act(read_label(Person,labelFn(HouseholdCleaningSprayOrWipe))),
+        act(use_as_directed_on(Person,
+                               HouseholdCleaningSprayOrWipe,
+                               Surface)).
+</code>
+
+===
+
+Here is an example taken from my COVID-19 paper. However, the
+Prolog-based Behavior Tree software that evaluates this particular
+behavior tree has not yet been fully completed.
+
+---
+
+## SECTION
+
+Jason/AgentSpeak(L)
+
+===
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/images/jason.png
+
+===
+
+For the time being, I've taken a shortcut which will hopefully be
+backwards compatible.  This shortcut is to switch to using the Jason
+Belief Desire Intention (BDI) Agent Architecture.
+
+---
+
+<pre>
++!sanitize_surface(Person,Surface) <-
+        !wearing_gloves(Person,_Gloves);
+        ?in(Surface,Room);
+        ?isa(Room,room);
+        !well_ventilated(Room);
+        ?holding(Person,
+                 HouseholdCleaningSprayOrWipe);
+        ?isa(HouseholdCleaningSprayOrWipe,
+             cleaningSpray);
+        read_label(Person,
+                   labelFn(HouseholdCleaningSprayOrWipe));
+        use_as_directed_on(Person,
+                           HouseholdCleaningSprayOrWipe,
+                           Surface).
+</pre>
+
+===
+
+This is what the code from the earlier slide probably looks like in
+Jason/AgentSpeak.  Fortunately, Jason/AgentSpeak appear to implement a
+superset of the features I was able to implement in the Behavior Tree
+software I wrote.  It is also much more mature and popular.
+
+---
+
+<pre>
+One possible mapping from our Behavior Tree software
+to Jason/AgentSpeak(L):
+ 
+  • !X ⇐ ensure_state(X).
+  • ?X ⇐ true_state(X).
+  • ?X ⇐ true_code(X).
+  • X : .ground(X) ⇐ act(X).
+  • ?x(X) : not .ground(X) ⇐ act(X).
+  • +X ⇐ begin_state(X).
+  • -X ⇐ end_state(X).
+</pre>
+
+===
+
+Here is one possible mapping from Behavior Trees to Jason/AgentSpeak.
+
+---
+
+## https://www.mdpi.com/electronics/electronics-10-02136/article_deploy/html/images/electronics-10-02136-g004.png
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/images/electronics-10-02136-g004.png
+
+===
+
+The default intention handling code for the Jason/AgentSpeak BDI
+architecture event loop operates in a round-robin fashion, and is thus
+FIFO workflow.  This helps to avoid dropping the ball, as happens with
+a LIFO workflow.  Because Jason is based on Prolog Interlingua, I have
+since integrated Jason with SWI-Prolog.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/incoming/jason-swipl-integration.png
+
+===
+
+I intend to use Jason/SWIPL as the metaplanner to control other
+(PDDL/etc) planners through FLP's planning wrappers.  
+
+---
+
+## FIXME: Logicmoo needs a slide
+
+<pre>
+Metaplanning Capabilities:
+ 
+  • Definitely will use the Logicmoo system when stable
+  • Have not been able to get OpenCyc's planning and
+    agency abilities to work
+  • Planning on connecting Jason/SWIPL with OpenCyc
+    through either Logicmoo's code, or perhaps using
+    my own Cyc wrappers in Perl/Emacs-Lisp
+</pre>
+
+===
+
+Metaplanning could eventually be achieved through integrating
+Logicmoo, OpenCyc, Jason and SWIPL.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/Temporal-Planning-and-Inferencing-for-Personal-Task-Management-with-SPSE2-1-2.ppm.jpg
+
+===
+
+Another tool mentioned in my COVID-19 paper is the Shared Priority
+System Editor version 2, or SPSE2 system.  This tool proved personally
+useful during the pandemic.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/images/spse2-pandemic-example.png
+
+===
+
+I often developed 50 to 100 point temporal plans for the
+accomplishment of tasks rendered more risky due to the pandemic.
+SPSE2 was a predecessor of, and now a component of, the Free Life
+Planner.
+
+---
+
+## SECTION
+
+'Predicting, Monitoring, Mitigating and Managing' Threats
+
+===
+---
+
+## https://frdcsa.org/~andrewdo/predicting-monitoring-mitigating-and-managing-threats.pdf#page=1
+
+## file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/predicting-monitoring-mitigating-and-managing-threats-01.ppm.jpg
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/predicting-monitoring-mitigating-and-managing-threats-01-02.ppm.jpg
+
+===
+
+Because of a family emergency, I had to withdraw my Ontolog 2022
+Pandemic Track talk.  However, I had already written some of a paper
+which was targeted towards general threat management.
+
+---
+
+## https://frdcsa.org/~andrewdo/predicting-monitoring-mitigating-and-managing-threats.pdf#page=2
+
+## file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/predicting-monitoring-mitigating-and-managing-threats-02.ppm.jpg
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/predicting-monitoring-mitigating-and-managing-threats-03-04.ppm.jpg
+
+
+===
+
+I am now presenting in the Ontolog 2022 Environment Disasters track,
+but this is just as well, since the overarching tool this presentation
+is about - the Free Life Planner - subsumes both use cases.
+
+---
+
+## https://frdcsa.org/~andrewdo/predicting-monitoring-mitigating-and-managing-threats.pdf#page=3
+
+## file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/predicting-monitoring-mitigating-and-managing-threats-03.ppm.jpg
+
+## file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/predicting-monitoring-mitigating-and-managing-threats-05-06.ppm.jpg
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/predicting-monitoring-mitigating-and-managing-threats-07-08.ppm.jpg
+
+===
+
+I wrote this paper, in order to talk more about threat management.
+
+---
+
+## https://frdcsa.org/~andrewdo/predicting-monitoring-mitigating-and-managing-threats.pdf#page=4
+
+## file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/predicting-monitoring-mitigating-and-managing-threats-04.ppm.jpg
+
+## file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/predicting-monitoring-mitigating-and-managing-threats-07-08.ppm.jpg
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/predicting-monitoring-mitigating-and-managing-threats-09-10.ppm.jpg
+
+===
+
+This paper will be finished and released some time
+after the presentation.
+
+---
+
+## SECTION
+
+The WOPR System
+
+===
+---
+
+"In a game-theoretic formulation of real world security protocols, it
+is possible to try ''to treat the world as a 'game' and then win that
+game by proving that bad things don't happen to people.''..."
+
+---
+
+"...Yet, the cardinality of possible moves is so large that the
+branching-factor dominates, rendering (deeper) searches ineffectual
+(except in restricted subdomains)..."
+
+---
+
+"...This suggests a knowledge-based approach towards inventorying and
+categorizing threats." - from the upcoming ''Predicting, Monitoring,
+Mitigating and Managing' Threats' paper
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/free-wopr/frdcsa/project.jpg
+
+===
+
+Our system for managing threats to security is called WOPR, after the
+contingent planning computer in the movie "War Games."
+
+---
+
+<pre>
+Through WOPR and other systems, FLP is intended
+to help bolster every type of security:
+ 
+  • Social
+  • Financial
+  • Emotional
+  • Food
+  • Water
+  • Cyber-Physical
+  • Home
+  • National
+</pre>
+
+===
+
+Through WOPR and other systems, FLP is intended to help bolster every
+type of security.
+
+---
+
+<code language='prolog'>
+%% Facts
+isa(andrewDougherty,person).
+%% Rules
+planForContingency(whatIf(infected(Person,covid19))) :-
+        isa(Person,person).
+possibleResponse(whatIf(infected(Person,covid19)),
+                 quarantine(Person)) :-
+        isa(Person,person).
+</code>
+
+===
+
+So, if isa(andrewDougherty,person) were in the WOPR Prolog factbase,
+the Prolog code declares a contingency plan needs to be developed for
+the possibility that I became infected with covid19, and suggests that
+I should quarantine. The next step is to develop the hypothetical
+contingency plan for me quarantining.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/images/flux.png
+
+===
+
+In order to develop contingency plans such as the quarantine plan, we
+must deal with the reality that the life planning environment is
+dynamic, uncertain, incomplete, underspecified, etc.  Thus, it is
+difficult to completely represent future states in which fluents like
+'infected' might hold.  One system which can handle such environments
+is the General FLUX cognitive agent programming system.
+
+---
+
+<pre>
+Advantages of using General FLUX:
+ 
+  • Under a free/libre license
+  • Prolog-based
+  • Can model state in the fluent calculus as a list,
+    with an unbound variable at the tail signifying
+    unknown fluents
+  • Can make more progress now that I have more Prolog
+    experience
+</pre>
+
+===
+
+FLUX has many advantages.  We did implement about 10 different
+planning domains in FLUX.
+
+---
+
+<pre>
+Difficulties using General FLUX:
+ 
+  • Relatively slow
+  • Apparently cannot handle nested fluents
+  • Uses integers instead of atoms for arguments,
+    which we overcame using the SerPro mapping
+  • Have not yet received access to FLUXPlayer
+  • Thus, no existing planning algorithms, so I 
+    wrote Breadth-First Search
+</pre>
+
+===
+
+However, I had some difficulties when using FLUX for this purpose.
+
+---
+
+<pre>
+Advantages of using Jason/AgentSpeak(L):
+ 
+  • Designed for dynamic uncertain environments
+  • BDI Agent Architecture
+  • Based on Prolog, handles nested terms with ease
+  • Has design patterns to implement other types of
+    goals, such as maintenance goals
+  • Peleus introduces limited STRIPS planning
+    abilities (based on a reductive interpretation of
+    Jason actions to preconditions and effects),
+    possibly making Jason more deliberative
+</pre>
+
+## https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.66.5917&rep=rep1&type=pdf
+
+===
+
+Because of these difficulties, I was unable to proceed until I
+rediscovered the Jason/AgentSpeak system, which is designed precisely
+to handle dynamic, uncertain environments.
+
+---
+
+<code language='prolog'>
+%% WOPR
+?- planForContingency(X).
+X = whatIf(infected(andrewDougherty))
+...
+?- possibleResponse(whatIf(infected(andrewDougherty)),Y).
+Y = quarantine(andrewDougherty).
+...
+</code>
+
+===
+
+WOPR is able to generate requests for the creation of plans for these
+contingencies, which are then implemented as plans inside
+Jason/AgentSpeak.
+
+---
+
+<pre>
+%% Jason/AgentSpeak quarantine plan
++!quarantine(Person) <-
+	?hasRoom(Person,Room);
+	!at(Person,Room);
+	+obligation(doNotLeave(Person,Room));
+	...
+</pre>
+
+===
+
+And then the Jason/SWIPL plan is selected and executed.
+
+---
+
+<pre>
+Open Questions with WOPR/Jason:
+ 
+  • How do I handle time?  Sequentially? Temporally?
+  • How do I model the environment? (EventCalc, SitCalc,
+    etc)?
+</pre>
+
+===
+
+Some open questions - how do I handle time or model the environment?
+
+---
+
+<code language='prolog'>
+genls([impact,likelihood],risk).
+genls([vulnerability,threat,risk],item).
+genls([person,property,facility],target).
+argIsa(hasThreat/2,1,vulnerability).
+argIsa(hasThreat/2,2,threat).
+argIsa(hasRisk/2,1,threat).
+argIsa(hasRisk/2,2,risk).
+argIsa(isExposedToThreat/2,1,target).
+argIsa(isExposedToThreat/2,2,threat).
+...
+</code>
+
+===
+
+This is the beginning of a threat ontology for WOPR.  Any threat
+knowledge-base that I could piece together for this talk would be
+incomplete, since I haven't done enough Natural Language Processing.
+
+---
+
+<code language='prolog'>
+%% Some facts
+genls(tornado,disasterEvent). genls(wildfire,disasterEvent).
+genls(tsunami,disasterEvent). genls(flooding,disasterEvent).
+genls(hurricane,disasterEvent).
+%%
+%% Prepare for all known disasters affecting all known persons
+planForContingency(whatIf(situationAffects(DisasterEvent,Person))) :-
+        genls(DisasterEventType,disasterEvent),
+        isa(DisasterEvent,DisasterEventType),
+        isa(Person,person).
+%% Prepare for if any todo list item is not completed
+planForContingency(neg(inTime(completed(Task)))) :-
+        task(TaskID,Task,Criticality),
+        \+ completed(TaskID).
+%% Mark contingency as unprepared for if no known possible response
+unpreparedForContingency(Contingency) :-
+        planForContingency(Contingency),
+        \+ possibleResponse(Contingency,Response).
+</code>
+
+===
+
+This is merely intended to be evocative of the kinds of threats that
+should be included, and how FLP will deliver on these counts.  We
+could work on both preparations and appropriate responses ordered by
+some norm on likelihood and impact.
+
+---
+
+## SECTION
+
+Prepping and Survivalism
+
+===
+---
+
+<pre>
+Goals of FRDCSA (and FLP):
+ 
+  • The evasion of chance in survival
+  • To minimize unnecessary psychological suffering
+</pre>
+
+===
+
+My A.I. has been from the outset intended to improve survivability
+while minimizing intense suffering.  These are good goals when
+considering prepping and survivalism.
+
+---
+
+<pre>
+Related Aspects of Free Life Planner:
+ 
+  • Focus on preparations, they are easier to automate
+  • Preparations can be likened to the first error
+    message in an error log.
+    • You don't debug the later messages, you debug the
+      first, since the later might be a consequence of
+      or otherwise affected by the first
+  • Preparations are usually less time-critical
+</pre>
+
+===
+
+To partially achieve this, we rely on preparations.
+
+---
+
+## file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/EmergencyPreparednessChecklist.pdf
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/EmergencyPreparednessChecklist-1-2.ppm.jpg
+
+===
+
+These kinds of checklists are a start, but better is a persistent
+assistant which guides the user to achieve and stay on top of
+emergency preparedness.
+
+---
+
+<code language='prolog'>
+scheduleTask(flp,
+        Person, checkBatteriesOnAllFireAlarmsInHome(Person,
+        Home)) 
+        :-
+	ought(maintain(Person,Home)),
+        lastTime(happened(Time,
+                checkBatteriesOnAllFireAlarmsInHome(Person,
+                                                    Home))),
+        currentTime(CurrentTime),
+        duration(Time,CurrentTime,months(Duration)),
+        Duration &gt; 6.
+</code>
+
+===
+
+Here the system would schedule a task to remind the user to check
+their fire alarm batteries six months after the last time they
+checked.
+
+---
+
+<code language='prolog'>
+%% %% maintenance of victuals
+%% 1 months after the last inspection
+hasRecurrenceSpec(do(Person,inspect(Person,Victuals)),
+                  sinceLastTime(months(1)),
+                  [10:30:0,12:0:0,15:0:0]) :-
+        ought(maintain(Person,Victuals)),
+        isa(Victuals,victuals).
+</code>
+
+===
+
+Here is a recurrence specification to remind the user to inspect their
+food and water supplies once a month, provided they are obligated to
+maintain them.
+
+---
+
+https://frdcsa.org/~andrewdo/writings/homeless-story.html
+
+===
+
+This survivalism use-case story details how FLP is intended to work.
+It is definitely worth the read, many people including some Computer
+Scientists did not really understand FLP or FRDCSA until reading this
+document.
+
+---
+
+https://frdcsa.org/~andrewdo/writings/health-story.html
+
+===
+
+This is another use-case story, detailing the healthcare component.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/images/free-life-planner-startup.png
+
+===
+
+I cannot in general show the full boot sequence of FLP because of
+private information, since I am dogfooding the application, i.e. using
+the program while writing it.
+
+---
+
+## SECTION
+
+The PrologCyc Discipline
+
+===
+---
+
+<code language='prolog'>
+possible(developsAilment(proteinPoisoning,Person)) :-
+        isa(Person,person),
+        isa(Meat,meat),
+        hasProperty(Meat,lean).
+        isa(Event1,eatingEvent),
+        doneBy(Event1,Person)
+        consumedObject(Event1,Meat),
+        neg(
+            holdsIn(
+                    timeIntervalInclusiveFn(now),
+                    and(doneBy(Event2,Person),
+                        isa(Event2,eatingEvent),
+                        consumedObject(Event2,Object),
+                        hasProperty(Object,fatty)))).
+</code>
+
+===
+
+This is a good time to talk about FLP's usage of what I call the
+PrologCyc discipline.  "PrologCyc discipline" means to me effectively
+following the protocols, APIs, vocabularies, etc that tools like
+OpenCyc have established.
+
+Here is a concept from the outdoor survivalism literature.  What this
+rule is attempting to say is that "If a Person eats lean meat, and
+does not eat anything fatty along with it, it's possible that they
+will develop protein poisoning."
+
+The idea here is to use these kinds of rules as world knowledge to
+constrain plans.
+
+However, since translating this rule to PrologCyc, I have learned that
+this concept about eating lean meat being potentially harmful, is
+itself not necessarily correct.  I will talk later about rule
+provenance and trust management.
+
+---
+
+<pre>
+FLP's Knowledge-Based Systems Features:
+ 
+  • The current FLP KBS API features are pretty minimal:
+    • Highlights:
+      • some poor isa/2, genls/2 support
+      • allTermAssertions/1,2
+      • constant_apropos/2
+      • constant_complete/2
+      • atTime([2022-02-19,21:16:29],Prop)
+      • hasTruthValue/2
+      • many others
+    • Concerns:
+      • incomplete support for and usage of
+        microtheories in FLP right now
+      • hence no multi-user support
+      • no at-rest encryption of private data, etc
+</pre>
+
+===
+
+FLP has limited KBS support at present.
+
+---
+
+<pre>
+The future FLP KBS API should be more impressive:
+ 
+  • Talk via Pengines with Logicmoo
+  • Use Logicmoo's Cyc access tools
+  • Use Logicmoo's inference engines
+  • Use FRDCSA's Cyc interface
+  • Use FRDCSA's FreeKBS2 inference
+    (Prolog and FOL)
+  • Abduction of argIsa relations
+  • etc, etc, etc
+</pre>
+
+===
+
+However, it will be much better once extended, and/or integrated with
+Logicmoo and or OpenCyc.
+
+---
+
+## SECTION
+
+E2C, NLU and NLU-MF and Rule Mining
+
+===
+---
+
+https://frdcsa.org/~andrewdo/projects/E2C.txt
+
+===
+
+A major strength of FLP is that so-called 'rules' governing life can
+eventually be mined from natural language.
+
+---
+
+## SECTION
+
+A.I. Planning Technologies in FLP
+
+===
+---
+
+## file:///var/lib/myfrdcsa/codebases/minor/flp-advocacy/data-git/types-of-planning-1.txt
+
+## ===
+
+## Some types of planning that I intend to cover with FLP.
+
+## ---
+
+https://frdcsa.org/~andrewdo/writings/homeless-story/hygiene.p.pddl.LPG.sol.html
+
+===
+
+Here is a sample PDDL plan to tackle a homelessness scenario.
+
+---
+
+## file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/clips/iem2-3.mp4#t=100,120
+
+## ---
+
+<pre>
+PDDL has major limitations, such as:
+ 
+  • Requiring perfect information
+  • Inability to deal with uncertainty
+  • Generally unable to sense or react outside of
+    certain specialized planners
+  • Inability to fail gracefully when no plan may
+    be found
+  • Inability to create new objects at run-time
+  • Inability to modify the goal stack at run-time
+  • Inability to have nonlinear/branching plans
+  • Lack of inborn plan execution monitoring
+</pre>
+
+===
+
+PDDL is an extremely powerful planning language, which I use
+throughout FLP and FRDCSA, however it has some limitations.  Please
+note There are probably exceptions to some of these cited limitations.
+
+---
+
+<pre>
+Some Metaplanners:
+ 
+  • Jason/SWIPL
+  • PUCCINI
+  • TAEB/Planner 
+  • BotHack
+  • Logicmoo’s adv_axiom.pl
+  • FLUX-FRDCSA
+  • Andrew Gree’s metaplanner
+    • https://github.com/hyperc-ai/metaplanner
+</pre>
+
+===
+
+Since most PDDL planners to not seem to allow one to change the domain
+or problem specifications at run time (with the exception of Andrew
+Gree's metaplanner), we return to the subject of metaplanning.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/209_Performatives_to_engender_the_creation_of_performatives-1.ppm.jpg
+
+===
+
+In order to define metaplanning, I refer to this sample document
+written by Douglas Miles which describes what is intended by the term.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/clips/TAEB.mkv#t=15,38
+
+===
+
+THE TAEB Planar AI makes heavy use of metaplanning and pathfinding for
+the video game called NetHack.  There is for instance a higher than
+expected degree of similarity between playing this game well and
+surviving emergencies such as environmental disasters or homelessness.
+Both problems are roughly speaking survival-oriented pathfinding.  I
+therefore rehabilitated the TAEB Planar AI in order to attempt to make
+use of its code for application to this real-life survival planning.
+
+---
+
+https://frdcsa.org/~andrewdo/archive/taeb/taeb.html
+
+===
+
+This article goes into great depth about how TAEB/Planar's pathfinding
+works.  It is very enlightening.  However, I was not able to properly
+harness TAEB/Planar.  I have had more success with metaplanning by
+focusing on Jason/SWIPL.
+
+## BotHack:
+
+## [Show clip of BotHack]
+
+## Reliance on pathfinding
+
+## Logicmoo’s adv_axiom.pl
+
+## Andrew Gree’s metaplanner
+
+## FLUX-FRDCSA
+
+---
+
+Here are some of the contemplated use-cases for metaplanning with our
+autonomous Jason/SWIPL software.
+
+---
+
+<pre>
+ • Help our software to carry out tasks
+ • Copy itself onto the user's new computers
+ • Help secure our networks
+ • Remote control OSes
+ • Security harden OSes
+ • Help the user execute safe and advisable programs
+ • Backup data and provide contingencies for it
+ • Search all the files on the user's personal network
+ • Handle sensor networks
+</pre>
+
+===
+---
+
+<pre>
+ • Gather software
+ • Package software
+ • Scrub and redact software
+</pre>
+
+===
+---
+
+<pre>
+ • Dialog with people about their situations
+ • Monitor the health of people
+ • Help people administer first aid
+ • Help the impoverished survive
+ • Plan for financial futures and contingencies
+</pre>
+
+===
+---
+
+<pre>
+ • Help ensure self-discipline
+ • Manage distractions
+ • Stay productive
+ • Help people manage their mood
+ • Help walk us through challenging situations
+ • Avoid emotional triggers
+ • Help people respond to domestic violence
+ • Develop prevention and response plans for
+   various contingencies
+ • Conduct thorough emergency preparedness and relief
+   (including for disasters such as pandemics)
+</pre>
+
+===
+---
+
+<pre>
+ • Browse the web and research for us
+ • Crawl the internet and extract software and other
+   artifacts
+ • Process incoming downloads and forward chain with
+   that information to accomplish more tasks
+ • Carry out epistemic reasoning over data structures
+</pre>
+
+===
+---
+
+A major goal of FLP is helping people avoid or get out of proximity to
+traps, since it is easier to get into a trap than it is to get out.
+
+---
+
+## Here is a formal definition of a trap, from the book Heuristic Search:
+
+## ---
+
+## <math>
+## "Many state space problems ... are reversible; that is, for each
+## action a ∈ A there exists an action a−1 ∈ A, so that a(a−1(u)) =
+## u and a−1(a(u)) = u. Each state that is reachable from the start
+## state can itself reach the start state. ..."
+
+## ===
+
+## "Many state space problems ... are reversible; that is, for each
+## action a ∈ A there exists an action a−1 ∈ A, so that a(a−1(u)) =
+## u and a−1(a(u)) = u. Each state that is reachable from the start
+## state can itself reach the start state. ..."
+
+## ---
+
+## "... Hence, if the goal is reachable, then it is reachable from every
+## state. Directed state space problems, however, can include
+## dead-ends. ..."
+
+## ===
+
+## "... Hence, if the goal is
+## reachable, then it is reachable from every state. Directed state
+## space problems, however, can include dead-ends. ..."
+
+## ---
+
+## Definition 1.10. (Dead-End) A state space problem has a dead-end u ∈ S
+## if u is reachable and Pu = (S,A,u,T) is unsolvable."
+
+## ===
+
+## Definition 1.10. (Dead-End) A state space problem has a dead-end u ∈ S
+## if u is reachable and Pu = (S,A,u,T) is unsolvable."
+
+## ---
+
+I want to make very clear that this project aims to help
+everyone, not just the marginalized.
+
+Having said that, there is a current focus on problems affecting the
+marginalized, since they are more exposed to more problems, such as
+the COVID-19 pandemic, and increasingly frequent and destructive
+natural disasters due to climate-change.
+
+Moreover, free/libre software inherently has more potential to reach
+the marginalized and adapt to their conditions in ways that
+proprietary software cannot.
+
+---
+
+<pre>
+Other Important FLP/FRDCSA systems:
+ 
+  • World State Monitor (WSM)
+    • A digital twin
+    • Has fluents editor, will learn which fluents
+      are more volatile, and will thus more frequently
+      assess their value
+  • Interactive Execution Monitor v2 (IEM2)
+    • Walks users through plans
+  • Verber
+    • Wrapper for various mostly PDDL planners
+  • Many others
+</pre>
+
+===
+
+There are around 125 released FRDCSA systems on GitHub.  Here are a
+few ones related to this presentation.
+
+---
+
+<pre>
+Need to develop FLP2:
+ 
+  • Need microtheory, multi-user, at-rest data
+     encryption, HIPAA compliance, etc support
+  • Need lazy loading of modules
+  • No tests yet
+  • Lots of spurious warnings and such that need
+    to be fixed
+  • Commenting is done incorrectly
+  • Many other technical debts
+</pre>
+
+===
+
+We need to do a rewrite of FLP once Logicmoo is ready, as there are
+just too many issues with the present FLP codebase.
+
+---
+
+## SECTION
+
+Releasing FLP
+
+===
+---
+
+<pre>
+FLP project success is defined as:
+ 
+  • https://freelifeplanner.org
+  • https://localhost:8443/flp
+  • 1-800-GET-HELP
+  • OS packages for FLP
+    • `sudo apt-get install free-life-planner`
+    • `sudo yum install free-life-planner`
+    • `sudo pacman -S free-life-planner`
+    • ...
+</pre>
+
+===
+
+Defining FLP project success.
+
+---
+
+<pre>
+Issues with releasing FLP:
+ 
+  • Inseparable from the FRDCSA system
+  • FRDCSA hasn't been properly released
+</pre>
+
+===
+
+Releasing FLP (and FRDCSA) has been the Achilles heel of the project,
+because of difficulty redacting private information, writing the
+installer, learning the packaging mechanisms, hardware failures, and
+many other issues.
+
+---
+
+## SECTION
+
+The FRDCSA Project
+
+===
+---
+
+https://altruisticsoftware.org/frdcsa/
+
+===
+
+The 'Formalized Research Database: Cluster, Study and Apply' Project.  
+
+---
+
+file:///var/lib/myfrdcsa/codebases/releases/frdcsa-reference-0.1/frdcsa-reference-0.1/visual-aid/frdcsa-small.jpg
+
+===
+
+The project logo blends the F from FRDCSA, the satisfaction relation,
+and the Greek letter Phi (made by altering the Debian project logo).
+Phi here denotes a set of sentences representing problems or
+constraints.  The FRDCSA Project logo is intended to suggest that the
+FRDCSA can correctly solve life problems, through extension of the
+Debian Universal Operating System with additional (usually AI)
+packages.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/debconf-2020/video/resources/old/images/visual-aid.ppm.jpg
+
+===
+
+I want to create a increasingly powerful 'weak AI'.
+
+## I am not even sure what all the acronyms mean these days (AGI/SAI/HLAI/etc).
+
+---
+
+<pre>
+FRDCSA Ontology Projects
+ 
+  • CO - Comprehensive Ontologies
+  • CSO - Comprehensive Software Ontology
+  • CLO - Comprehensive Library Ontology
+  • CFO - Comprehensive Function Ontology
+  • CPMO - Comprehensive Package Management Ontology
+  • CFRO - Comprehensive FRDCSA Resource Ontology
+</pre>
+
+===
+
+There are many ontology and knowledge-base projects in some state of
+development in FRDCSA.
+
+---
+
+<pre>
+More FRDCSA Ontology Projects
+ 
+  • MKM project (Mathematical Knowledge Management) seeks
+    to formalize mathematical knowledge within Cyc
+  • Textbook Knowledge Formation: Really need dmiles'
+    E2C program here
+  • Research-Ontology 
+  • Food-Ontology 
+  • Reward-Ontology / Penalty-Ontology
+  • ...
+</pre>
+
+===
+---
+
+<pre>
+FRDCSA Project goals:
+ 
+  • ~400,000 project todo list items, need to be
+    vetted and redacted
+  • Move beyond 1-person effort
+  • Possibly get funding for bringing under test,
+    redacting, releasing, additional development
+  • Completely forkable dev ops, pros cons (con is
+    fragmentation)
+  • Finish getting a modification invariant UID for each
+    do-todo-list-mode entry
+  • Have people make packages or finish semiautomatic
+    packaging using ESP(Jason<->SWIPL)
+</pre>
+
+===
+
+FRDCSA project is more fully specified by its many goals.
+
+---
+
+<pre>
+More FRDCSA Project goals:
+ 
+  • Easier to change circumstances than minds
+  • Mass adoption of FLP
+  • Extensibility and configurability
+  • Mechanism design/gamification
+  • Works for everyone but especially helpful to
+    marginalized populations/demographics
+</pre>
+
+===
+---
+
+<pre>
+Some actual mistakes the project has made:
+ 
+  • Written too much bespoke software
+  • Not enough packages of other people's software
+    • Mainly due to difficulty building the Packager
+      system
+      • (Now working on Jason/SWIPL-based rule-based
+        Expert System for Packaging (ESP))
+  • Misunderstood Curry-Howard correspondence
+  • Misunderstood relation of project to ordinal
+    analysis
+</pre>
+
+===
+
+There have been many mistakes commited.
+
+---
+
+## SECTION
+
+Releasing the FRDCSA
+
+===
+---
+
+<pre>
+Releasing FRDCSA:
+ 
+  • Haven't released full system due to personal data
+    strewn throughout the repositories
+    • Repositories are dozens of GB large,
+      • Must semi-automate the process
+        • The scrubber/redactor/release-manager/etc systems
+  • Entire system is heavily rootbound
+    • Hard to factor it into orthogonal components
+      • Although minor/task2 is supposed to do just that
+        as needed
+  • Did release a stripped down, older, terminal version of
+    FRDCSA/FLP via the Panoply-Git GNU/Linux VM
+</pre>
+
+===
+
+Releasing FRDCSA.
+
+---
+
+<pre>
+Releasing FRDCSA:
+ 
+  • Cannot demo most functionality because of private
+    data
+  • Massive technical debt and disorganization since
+    lacking funds to purchase hardware such as NAS
+  • Have written two auto test generators, for bringing
+    under test
+    • Automated-Legacy-Tests
+    • AOP-SWIPL
+  • Need to arrange for continuity of the project
+  • Logicmoo needs to be finished, hence, funded
+  • Someone to manage a nonprofit
+    • Since I cannot
+  • Need assistance, not instruction
+</pre>         
+
+===
+---
+
+Just recently, some interested collaborators have helped to motivate
+and push me to fast-track the FRDCSA (Panoply) release.  We've decided
+to make the outdated and redacted Panoply git codebases at
+https://github.com/aindilis the stable, only branch of FRDCSA.  
+
+---
+
+I will then backport as much as feasible from my private version,
+which I've written these last 5 years.  This means that a working
+version of FRDCSA is now installable and LIVE (i.e. no longer a
+terminal branch of the project).
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/images/frdcsa-installer.png
+
+===
+
+Do note although the installer is released, it's not ready yet.  It
+should be ready soon after this presentation.  Moreover, it needs
+some files to be sourced properly)
+
+---
+
+## FIXME: include clip of the robotic book scanner
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/clips/robotic-book-scanner.mp4#t=2,17
+
+===
+
+Some stuff that has gotten FRDCSA the most attention took a couple
+hours, like the project's robotic book scanner.  On the otherhand,
+FRDCSA has taken 22 years.  It will be a game changer now that the
+system can be installed, and people will see what FRDCSA can do.
+
+---
+
+AI really needs a first class effort like the Manhattan project, or
+the Apollo project, to inaugurate AI.  Perhaps I'm describing the Cyc
+project...
+
+I admire the technical achievements of the Cyc project.
+
+---
+
+<pre>
+Purpose of FRDCSA:
+  • FRD :=
+    'universal database of all mathematical knowledge'
+    • (actually a KB, not DB)
+    • Maximize problem solving capabilities in a formal
+      mathematical sense
+    • Package https://swmath.org
+    • Package all known Automated Theorem Proving systems
+      and proof libraries
+  • CSA generalizes FRD to also include non-mathematical
+    software
+</pre>
+
+===
+
+The purpose of the FRD project is to create a universal database of
+all mathematical knowledge.  For instance, focused crawling and
+packaging all the software systems referenced by swMath.org.  CSA
+includes non-mathematical software systems. 
+
+---
+
+https://en.wikipedia.org/wiki/Computational_problem/
+
+===
+
+We are attempting to collect algorithmic solutions to as many
+computational problems as we can. Thus, our software archive contains
+solutions to large numbers of computational problems. The problems
+that people routinely face are usually reducible to these
+computational problems.
+
+---
+
+<pre>
+ Various kinds of computational problems:
+ 
+  • Decision Problem
+  • Search Problem
+  • Counting Problem
+  • Optimization Problem
+  • Function Problem
+</pre>
+
+===
+
+There are more kinds of computational problems, however, than just
+decision problems, as mentioned at this URL.
+
+---
+
+## SECTION
+
+FRDCSA Theory
+
+===
+---
+
+The FRDCSA theses (combined) say that it is imperative to collect and
+package free/libre open-source software en masse.
+
+---
+
+https://frdcsa.org/~andrewdo/presentation-6.jpg
+
+===
+
+This is an early and partially incorrect write-up of the deductive
+part of the FRDCSA thesis.  But the statement of the results I believe
+to be correct.
+
+---
+
+<math>
+FRDCSA 'Thesis' Part 1.A. (deductive):<br>
+&forall; P &isin; TR
+(&exist; Q &isin; TR
+(larger(Q,P) &and; stronger(Q,P)))
+</math>
+
+===
+
+Part 1 A of the FRDCSA thesis says that for any program there is
+always a larger and stronger program.  By larger I mean greater
+Kolmogorov complexity, and stronger I mean proves exactly a strict
+superset of (true) theorems.  I like to think of this result as saying
+"there's always a bigger fish."
+
+---
+
+<math>
+FRDCSA 'Thesis' Part 1.B. (deductive):<br>
+&not; &forall; P &isin; TR
+(&exist; Q &isin; TR
+(&not; larger(Q,P) &and; stronger(Q,P)))
+</math>
+
+===
+
+Part 1 B of the FRDCSA thesis says that it is not the case that for
+any program there is always a stronger program that is however not
+larger.  This essentially means programs must ultimately grow in order
+to solve more problems.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/images/godelian.png
+
+===
+
+Mechanization of the corrected statement of assumptions and proofs for
+Parts 1.A. and 1.B. of the FRDCSA thesis has been started by sto0pkid,
+and is available here.
+
+---
+
+"Can't say I've found anything that I'd call a 'defect' in your
+theory. Of course there were minor details in your original
+formulation of the logical statements that had to be sorted out
+but even though my Agda formalization isn't quite 100% yet I have
+no doubt at this point that the assertions about the necessity of
+aggregation are true, mathematically...."
+
+---
+
+"...On the other hand what to actually do with that information in
+practice is something I'm rather less confident about." - sto0pkid
+
+---
+
+The Part 1.A. and 1.B. follow from the fact that no program can decide
+the truth values of all statements in an undecidable logic. This Agda
+proof seems complicated to me, but the intuition is simple.
+
+---
+
+For Part 1.A., since no program can decide all, that means that there
+are always more decisions that can be added to the initial program.
+
+---
+
+For Part 1.B., the issue is that the programs must eventually become
+larger, since for any given program there are only a finite number of
+smaller programs, but there are infinite sequences of increasingly
+strong programs.
+
+---
+
+FRDCSA 'Thesis' Part 2.A. (abductive):
+ 
+One way to increase program strength is to collect software (in lieu
+of a better approach).
+
+===
+
+Part 2 A of the FRDCSA thesis is abductive, and says that one way to
+increase program strength is to collect software (in lieu of a better
+approach).
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/flp-videos/video/resources/docs/frdcsa-thesis-part-2.txt
+
+===
+
+Here is a first try to formalize this.
+
+---
+
+FRDCSA 'Thesis' Part 2.B. (abductive):
+ 
+Given the extent of free software, packaging this software is a
+necessary step of any practical attempt by our group to increase our
+solution space.
+
+---
+
+https://frdcsa.org/~andrewdo/writings/benefits-of-making-packages.html
+
+===
+
+There are many benefits to packaging software.
+
+---
+
+
+FRDCSA 'Thesis' Part 2.C. (deductive?):
+
+Collecting software is not sufficient, therefore we must write
+numerous systems to help us glue the functionality of the software
+together where necessary.
+
+---
+
+https://frdcsa.org/~andrewdo/writings/minor-codebase-descriptions.txt
+
+===
+
+I have written over 900 codebases.  However, some of them are mere
+stub projects, containing, for instance, notes on how to proceed.
+
+---
+
+https://altruisticsoftware.org/frdcsa/introduction/doc/acm74.pdf
+
+===
+
+This paper by Gregory Chaitin expresses the idea particularly clearly.
+
+---
+
+"The approach of this paper, in contrast, is to measure the power of a
+set of axioms, to measure the information that it contains. We shall
+see that there are circumstances in which one only gets out of a set
+of axioms..."
+
+---
+
+"...what one puts in, and in which it is possible to reason in the
+following manner. If a set of theorems constitutes t bits of
+information, and a set of axioms contains less than t bits of
+information, then it is impossible to deduce these theorems from these
+axioms."
+
+---
+
+Simply replace 'theorems' with 'problems', 'axioms'
+with 'programs', and 'deduce' with 'solve' to understand the
+general necessity of having more software.
+
+---
+
+I.E.: "If a set of problems constitutes t bits of information, and a
+set of programs contains less than t bits of information, then it is
+impossible to solve these problems from these programs."
+
+---
+
+What is the channel capacity of one human programmer typist (for
+meaningful information), vs millions of programmers?  We must
+therefore rely on the work of others, in order to address the
+algorithmic information bottleneck.
+
+---
+
+file:///home/andrewdo/Downloads/bear.jpeg
+
+===
+
+The project theses leave open the question of how fast program size
+should be increasing.  I need to formalize this answer: "We can't out
+run this bear!!  True, but I can out run you."
+
+---
+
+<pre>
+andrewdo@ai2:~$ apt-cache search 'artificial intelligence'
+cl-reversi - Reversi game for Common Lisp
+python-genetic - genetic algorithms in Python
+lebiniou - displays images that evolve with sound
+newlisp - LISP like, general purpose scripting language
+andrewdo@ai2:~$ 
+</pre>
+
+===
+
+There is an alarming lack of packaged Artificial Intelligence
+software. This example shows how the search phrase 'artificial
+intelligence' has but 4 matches out of 60,000 Debian packages.
+
+---
+
+https://altruisticsoftware.org/frdcsa/git/index.html
+
+===
+
+People on the #debian channels ask - well what AI systems would you
+package?
+
+For starters, I have semi-automatically collected over 2000
+free/libre open source A.I. systems., and maintain a prioritized list
+of software to make into packages.
+
+---
+
+https://altruisticsoftware.org/frdcsa/external/index.html
+
+===
+---
+
+## FRDCSA/FLP system is a proof of concept, which nevertheless helps me
+## organize in the meantime.
+
+## ---
+
+## [Show ArchiveBox, and NLU-MF]
+
+## ===
+
+Engineering the FRDCSA can be likened to creating a tool shop, with
+the intuition that it is provident to collect and prepare tools for
+use before problems are encountered, thus sparing the possible failure
+of a last-minute search for the proper tool under time pressure.
+
+---
+
+file:///var/lib/myfrdcsa/codebases/minor/argument-system/data-git/argdown/graphs/test.argdown.png
+
+===
+
+I have begun argument mapping various debates surrounding the FRDCSA
+and FLP projects, in order to precisely characterize them, and
+hopefully generate arguments and proofs that support the goals and
+strategies of the project.  These arguments could hopefully be used to
+help persuade rational people to support the project in any way they
+can.
+
+---
+
+<pre>
+Acknowledgements:
+Thanks to:
+ 
+  • dmiles
+  • CasAm
+  • jbalint
+  • koo5
+  • sto0pkid
+  • Justin Coslor
+  • Christina Taft
+  • Meredith McGhan
+  • Paul Fierro
+  • Dr. Ravi Sharma
+</pre>
+
+---
+
+<pre>
+# https://frdcsa.org
+# https://freelifeplanner.org
+# https://github.com/aindilis
+# https://frdcsa.org/~andrewdo
+</pre>
+
+===
+---
+
+THE END
