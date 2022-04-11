@@ -939,7 +939,7 @@ to handle dynamic, uncertain environments.
 <code language='prolog'>
 %% WOPR
 ?- planForContingency(X).
-X = whatIf(infected(andrewDougherty))
+X = whatIf(infected(andrewDougherty)).
 ...
 ?- possibleResponse(whatIf(infected(andrewDougherty)),Y).
 Y = quarantine(andrewDougherty).
@@ -2159,6 +2159,7 @@ Thanks to:
 # https://freelifeplanner.org
 # https://github.com/aindilis
 # https://frdcsa.org/~andrewdo
+# https://facebook.com/frdcsa
 </pre>
 
 ===

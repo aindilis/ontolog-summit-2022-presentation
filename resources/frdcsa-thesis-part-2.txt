@@ -1,0 +1,39 @@
+And here are some recent very bad musings on trying to
+use (abductive) practical reasoning to "prove" that in lieu of a
+better approach to increasing proof-theoretic strength one
+should package software.
+
+task(A,'Increase Proof-theoretic strength').
+
+task(B,'Increase Kolmogorov complexity.').
+
+always(eventually(A)) -> always(eventually(B)).
+
+task(C,'Increase program size.').
+
+always(eventually(B)) -> always(eventually(C)).
+
+task(D,'Gather more software.').
+
+always(D) -> always(eventually(B)).
+
+# Abductive practical reasoning allows affirming the consequent in
+# the absense of competing strategies, as an educated guess, i.e.:
+
+always(eventually(B)) -> always(D).
+
+# Therefore:
+
+always(eventually(A)) -> always(D).
+
+# i.e.
+
+always(eventually('Increase Proof-theoretic strength')) -> always('Gather more software').
+
+always(A) -> always(eventually(A)).
+
+# Therefore.
+
+always('Increase Proof-theoretic strength') -> always('Gather more software').
+
+# ^^^ Seems suspect, probably due to abductive inference not carrying or something.
