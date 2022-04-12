@@ -49,22 +49,6 @@ This talk concerns 'predicting, monitoring, mitigating and managing'
 
 ---
 
-<pre>
-Example Environmental Disasters:
- 
-  • Climate change
-  • Environmental pollution
-  • Wildfires
-  • Floods
-  • Habitat loss
-</pre>
-
----
-
-I suggest what I (dryly) term a 'draconian solution' (i.e. reducing the
-problem to a harder problem).
-
----
 
 As an analogy, I 'reduce' the environmental disaster problem to general
 life planning, and put forth a satisficing implementation called the
@@ -75,22 +59,6 @@ Free Life Planner aka FLP as a solution,
 and demonstrate how it applies in the specific case of
 handling environmental disasters.
 
----
-
-Preview of the Free Life Planner (FLP)
-
----
-
-file:///resources/flp-screenshots-1.png
-
-===
-
-Here are some (outdated) screenshots of services that the Free Life
-Planner provides.
-
----
-
-file:///resources/flp-screenshots-2.png
 
 ===
 
@@ -98,18 +66,86 @@ This talk is going to focus on this intelligent personal assistant
 which will help individuals to take control of every aspect of their
 lives, including but not limited to emergency preparedness.
 
+
 ---
 
-file:///resources/iem-20220327-cycle-weekly3.mp4#t=40,50
+<pre>
+Goals of the talk:
+
+  • Convince the audience:
+    • How zero marginal cost (ZMC) + libre + gratis
+      properties enable ~8,000,000,000 potential FLP
+      users
+      • Precedent: GNU/Linux
+    • That 'FLP could help save lives, improve quality
+      of life and reduce suffering'
+    • To enlist your support in completing,
+      releasing and promoting FLP and FRDCSA
+</pre>
+
+---
+
+
+The purpose of the talk is...
+
+
+<pre>
+Purpose:
+
+  • Need Intelligent Personal Assistant
+  • Ensure 'Last Mile Delivery' of services
+  • Provides public health and policy data
+    • With fine-grained consent or
+      secure multi-party computation
+</pre>
 
 ===
 
-This video shows one temporal planning subsystem called Interactive
-Execution Monitor version 2 (a.k.a. IEM2), which is part of the
-backend behind FLP.  There is a corresponding web front end to this
-planning system.
+There is a need for an intelligent personal assistant which is with
+the user in the trenches, enabling the last mile delivery of salient
+guidance, and conversely uploading evidence for public health.
 
 ---
+
+<pre>
+Suggestions:
+
+  • Please re-watch and occasionally pause
+  • Please type any questions into the chat
+    which I can then answer
+</pre>
+
+===
+
+And some suggestions.  There is more relevant information than I am
+able to summarize contained in this presentation, so I recommend
+re-watching the video and occasionally pausing it as needed.
+
+---
+
+<pre>
+Outline of talk:
+
+  • Introduction
+  • The Problem of Environmental Disasters
+  • The Free Life Planner (FLP)
+  • Plan-Monitor
+  • Jason/AgentSpeak(L)
+  • 'Predicting, Monitoring, Mitigating and Managing' Threats
+  • The WOPR System
+  • Prepping and Survivalism
+  • The PrologCyc Discipline
+  • E2C, NLU and NLU-MF and Rule Mining
+  • A.I. Planning Technologies in FLP
+  • Releasing FLP
+  • The FRDCSA Project
+  • Releasing the FRDCSA
+  • FRDCSA Theory
+</pre>
+
+===
+
+Outline of the talk.
 
 ## SECTION
 
@@ -119,8 +155,10 @@ The Problem of Environmental Disasters
 ---
 
 <pre>
-Some dimensions of the problem:
- 
+
+There are many dimensions to the problem of environmental disasters, including
+but not limited to:
+
   • Prevention
     • Reducing individual contribution
       • E.g. committing to recycling, lowering
@@ -135,14 +173,6 @@ Some dimensions of the problem:
 </pre>
 
 ===
-
-There are many dimensions to the problem of environmental disasters.
-
----
-
-In July of 2021 I wrote Al Gore regarding FLP, describing how one
-use-case dealt with helping people to reduce their environmental
-footprint.
 
 ---
 
@@ -168,12 +198,7 @@ file:///resources/tsunami.png
 A second example of an environmental disaster that could have been
 mitigated is the 2004 Indian Ocean earthquake and tsunami, which took
 over 200,000 lives.  A cellphone warning system could have alerted and
-directed many more people to safety.  This tragedy was disheartening
-because, although an idea is not an implementation, at that time I had
-been campaigning 2 years with no discernable progress for this system.
-22 years on, although it hasn't yet made its impact, much technical
-progress on FLP fortunately has been made.
-
+directed many more people to safety.
 ---
 
 https://frdcsa.org/~andrewdo/writings/artificialintelligence-second-half.txt
@@ -202,198 +227,6 @@ response coordination.
 
 ---
 
-These are a few examples of where FLP would be useful.  However, being
-a life planner, it is intended to adequately manage many other
-situations and types of events.
-
----
-
-<pre>
-Some General Use Cases for FLP:
- 
-  • Natural and Man-made Disasters
-    • Pandemics
-    • Climate Change
-  • Conditions
-    • Poverty
-    • Homelessness
-    • Disability
-    • Illness
-    • Domestic violence
-    • etc
-</pre>
-
-===
-
-Here are some of the use cases for FLP.
-
----
-
-## FIXME: Strengthen
-
-https://owntracks.org/booklet/
-
-===
-
-For positional reasoning, FLP currently integrates with the Own Tracks
-system, part of FLP's Location Logic subsystem.  OwnTracks tracks
-users' location via cellphone, and is free/libre software.
-
----
-
-file:///resources/flp-subsystems.png
-
-===
-
-The FLP GitHub pages list many of its current subsystems, which are in
-various states of completion.
-
----
-
-## SECTION
-
-The Free Life Planner (FLP)
-
-===
----
-
-<pre>
-About:
- 
-  • Free/Libre Social Friendly A.I.
-  • For day to day life
-    • Generating and walking through plans
-    • Behavior modification
-  • For emergencies
-    • Emergency preparedness
-    • Emergency management
-</pre>
-
-===
-
-I will now focus on how to create 'Free-Libre Social Friendly
-Artificial Intelligence' in service of the problems of day to day
-living, including planning and behavior modification, and also
-emergencies, through emergency preparedness and emergency management.
-This can be achieved through systems integration and software
-applications of Knowledge-Based Systems.
-
----
-
-<pre>
-Purpose:
- 
-  • Need Intelligent Personal Assistant
-  • Ensure 'Last Mile Delivery' of services
-  • Provides public health and policy data
-    • With fine-grained consent or
-      secure multi-party computation
-</pre>
-
-===
-
-There is a need for an intelligent personal assistant which is with
-the user in the trenches, enabling the last mile delivery of salient
-guidance, and conversely uploading evidence for public health.
-
----
-
-file:///resources/iem2-wsm.mp4#t=0,22
-
-===
-
-FLP is intended to 'eventually always' meet this need.  FLP is a
-mobile friendly web application, which plans preactively, proactively
-and reactively - at multiple levels of granularity - in order to both
-survive and thrive on a daily basis, and prepare for managing
-emergencies when necessary.
-
----
-
-<pre>
-Goals of the talk:
- 
-  • Convince the audience:
-    • How zero marginal cost (ZMC) + libre + gratis
-      properties enable ~8,000,000,000 potential FLP
-      users
-      • Precedent: GNU/Linux
-    • That 'FLP could help save lives, improve quality
-      of life and reduce suffering'
-    • To enlist your support in completing,
-      releasing and promoting FLP and FRDCSA
-</pre>
-
-===
-
-The purpose of the talk is threefold.  First, to illustrate that
-because free/libre software is freely redistributable and can assist
-people indirectly, whether or not they have a computer, it has the
-potential to offer help to almost everyone on the planet, in the same
-way that GNU/Linux could.  Second, to convince you that FLP could in
-fact help save lives, improve quality of life, and reduce intense
-suffering.  Third, to enlist your active support of these projects.
-
----
-
-<pre>
-Disclaimers:
- 
-  • I am partially self-taught (so a lot of what I
-    say here hasn't been independently verified)
-  • I have difficulty summarizing
-  • First video generated by my PresGen system
-  • Apologize for the use of Text-To-Speech
-</pre>
-
-===
-
-Some disclaimers.
-
----
-
-<pre>
-Suggestions:
- 
-  • Please re-watch and occasionally pause
-  • Please type any questions into the chat
-    which I can then answer
-</pre>
-
-===
-
-And some suggestions.  There is more relevant information than I am
-able to summarize contained in this presentation, so I recommend
-re-watching the video and occasionally pausing it as needed.
-
----
-
-<pre>
-Outline of talk:
- 
-  • Introduction
-  • The Problem of Environmental Disasters
-  • The Free Life Planner (FLP)
-  • Plan-Monitor
-  • Jason/AgentSpeak(L)
-  • 'Predicting, Monitoring, Mitigating and Managing' Threats
-  • The WOPR System
-  • Prepping and Survivalism
-  • The PrologCyc Discipline
-  • E2C, NLU and NLU-MF and Rule Mining
-  • A.I. Planning Technologies in FLP
-  • Releasing FLP
-  • The FRDCSA Project
-  • Releasing the FRDCSA
-  • FRDCSA Theory
-</pre>
-
-===
-
-Outline of the talk.
-
----
-
 ## https://www.youtube.com/watch?v=mk35eReQKvo
 
 file:///resources/Paradise-Camp-Fire-Evacuation---11-13-2020---v1-mk35eReQKvo.mkv#t=60,74
@@ -417,6 +250,95 @@ Another way to frame the problem is to focus on the "local,"
 1st-person, bottom-up, micro perspective.
 
 ---
+
+These are a few examples of where FLP would be useful.  However, being
+a life planner, it is intended to adequately manage many other
+situations and types of events.
+
+---
+
+
+## SECTION
+
+The Free Life Planner (FLP)
+
+===
+---
+
+<pre>
+About:
+
+  • Free/Libre Social Friendly A.I.
+  • For day to day life
+    • Generating and walking through plans
+    • Behavior modification
+  • For emergencies
+    • Emergency preparedness
+    • Emergency management
+</pre>
+
+===
+
+I will now focus on how to create 'Free-Libre Social Friendly
+Artificial Intelligence' in service of the problems of day to day
+living, including planning and behavior modification, and also
+emergencies, through emergency preparedness and emergency management.
+This can be achieved through systems integration and software
+applications of Knowledge-Based Systems.
+
+---
+
+<pre>
+Purpose:
+
+  • Need Intelligent Personal Assistant
+  • Ensure 'Last Mile Delivery' of services
+  • Provides public health and policy data
+    • With fine-grained consent or
+      secure multi-party computation
+</pre>
+
+===
+
+There is a need for an intelligent personal assistant which is with
+the user in the trenches, enabling the last mile delivery of salient
+guidance, and conversely uploading evidence for public health.
+
+FLP is intended to 'eventually always' meet this need.  FLP is a
+mobile friendly web application, which plans preactively, proactively
+and reactively - at multiple levels of granularity - in order to both
+survive and thrive on a daily basis, and prepare for managing
+emergencies when necessary.
+
+
+file:///resources/flp-subsystems.png
+
+===
+
+The FLP project can be found at: <insert github or frdcsa.org link>
+
+---
+
+<pre>
+Some General Use Cases for FLP:
+
+  • Natural and Man-made Disasters
+    • Pandemics
+    • Climate Change
+  • Conditions
+    • Poverty
+    • Homelessness
+    • Disability
+    • Illness
+    • Domestic violence
+    • etc
+</pre>
+
+===
+
+Here are some of the use cases for FLP.
+---
+
 
 file:///resources/plan-monitor-cell-phone-editted.mp4#t=0,15
 
@@ -445,9 +367,21 @@ https://creativecommons.org/licenses/by-sa/4.0/?ref=openverse
 ===
 ---
 
-"Canyon Fire 2" by /\ltus is marked with CC BY-NC-ND 2.0. To view the terms, visit https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=openverse 
+"Canyon Fire 2" by /\ltus is marked with CC BY-NC-ND 2.0. To view the terms, visit https://creativecommons.org/licenses/by-nc-nd/2.0/?ref=openverse
 
 ===
+---
+
+## FIXME: Strengthen
+
+https://owntracks.org/booklet/
+
+===
+
+For positional reasoning, FLP currently integrates with the Own Tracks
+system, part of FLP's Location Logic subsystem.  OwnTracks tracks
+users' location via cellphone, and is free/libre software.
+
 ---
 
 ## SECTION
@@ -486,7 +420,7 @@ human factors present.
 
 file:///resources/behavior-tree-task-manager-for-covid-19-5.ppm.jpg
 
-=== 
+===
 
 Nevertheless, finishing the original Plan-Monitor would still be of
 specific use to those who need extra layers of security during the
@@ -501,7 +435,7 @@ through plans.
 export URL='https://github.com/aindilis'
 cpanm $URL/plan-monitor/raw/master/plan-monitor-0.01.tar.gz
 cpanm $URL/perl-btpm/raw/master/perl-btpm-0.01.tar.gz
-cpanm $URL/perl-btsk/blob/master/perl-btsk-0.01.tar.gz 
+cpanm $URL/perl-btsk/blob/master/perl-btsk-0.01.tar.gz
 </pre>
 
 ===
@@ -527,9 +461,9 @@ operation.
 
 <pre>
 Strengths of Plan-Monitor:
- 
+
   • Based on behavior trees
-  • Real-time (including WebSocket-based WebUI) 
+  • Real-time (including WebSocket-based WebUI)
   • Ability to handle nonlinear/branching/contingent
     plans
   • 'Imperative reactive planning-with-sensing, and
@@ -545,9 +479,9 @@ Plan-Monitor has many strengths.
 
 <pre>
 Limitations of Plan-Monitor:
- 
+
   • No concurrent tasks and plans
-  • No deliberation 
+  • No deliberation
   • Simple implementation
   • Currently lacking more sophisticated
     behavior tree features
@@ -641,7 +575,7 @@ software I wrote.  It is also much more mature and popular.
 <pre>
 One possible mapping from our Behavior Tree software
 to Jason/AgentSpeak(L):
- 
+
   • !X ⇐ ensure_state(X).
   • ?X ⇐ true_state(X).
   • ?X ⇐ true_code(X).
@@ -676,7 +610,7 @@ file:///resources/jason-swipl-integration.png
 ===
 
 I intend to use Jason/SWIPL as the metaplanner to control other
-(PDDL/etc) planners through FLP's planning wrappers.  
+(PDDL/etc) planners through FLP's planning wrappers.
 
 ---
 
@@ -684,7 +618,7 @@ I intend to use Jason/SWIPL as the metaplanner to control other
 
 <pre>
 Metaplanning Capabilities:
- 
+
   • Definitely will use the Logicmoo system when stable
   • Have not been able to get OpenCyc's planning and
     agency abilities to work
@@ -823,7 +757,7 @@ contingent planning computer in the movie "War Games."
 <pre>
 Through WOPR and other systems, FLP is intended
 to help bolster every type of security:
- 
+
   • Social
   • Financial
   • Emotional
@@ -877,7 +811,7 @@ is the General FLUX cognitive agent programming system.
 
 <pre>
 Advantages of using General FLUX:
- 
+
   • Under a free/libre license
   • Prolog-based
   • Can model state in the fluent calculus as a list,
@@ -896,13 +830,13 @@ planning domains in FLUX.
 
 <pre>
 Difficulties using General FLUX:
- 
+
   • Relatively slow
   • Apparently cannot handle nested fluents
   • Uses integers instead of atoms for arguments,
     which we overcame using the SerPro mapping
   • Have not yet received access to FLUXPlayer
-  • Thus, no existing planning algorithms, so I 
+  • Thus, no existing planning algorithms, so I
     wrote Breadth-First Search
 </pre>
 
@@ -914,7 +848,7 @@ However, I had some difficulties when using FLUX for this purpose.
 
 <pre>
 Advantages of using Jason/AgentSpeak(L):
- 
+
   • Designed for dynamic uncertain environments
   • BDI Agent Architecture
   • Based on Prolog, handles nested terms with ease
@@ -971,7 +905,7 @@ And then the Jason/SWIPL plan is selected and executed.
 
 <pre>
 Open Questions with WOPR/Jason:
- 
+
   • How do I handle time?  Sequentially? Temporally?
   • How do I model the environment? (EventCalc, SitCalc,
     etc)?
@@ -1043,7 +977,7 @@ Prepping and Survivalism
 
 <pre>
 Goals of FRDCSA (and FLP):
- 
+
   • The evasion of chance in survival
   • To minimize unnecessary psychological suffering
 </pre>
@@ -1058,7 +992,7 @@ considering prepping and survivalism.
 
 <pre>
 Related Aspects of Free Life Planner:
- 
+
   • Focus on preparations, they are easier to automate
   • Preparations can be likened to the first error
     message in an error log.
@@ -1089,7 +1023,7 @@ emergency preparedness.
 <code language='prolog'>
 scheduleTask(flp,
         Person, checkBatteriesOnAllFireAlarmsInHome(Person,
-        Home)) 
+        Home))
         :-
 	ought(maintain(Person,Home)),
         lastTime(happened(Time,
@@ -1203,7 +1137,7 @@ provenance and trust management.
 
 <pre>
 FLP's Knowledge-Based Systems Features:
- 
+
   • The current FLP KBS API features are pretty minimal:
     • Highlights:
       • some poor isa/2, genls/2 support
@@ -1228,7 +1162,7 @@ FLP has limited KBS support at present.
 
 <pre>
 The future FLP KBS API should be more impressive:
- 
+
   • Talk via Pengines with Logicmoo
   • Use Logicmoo's Cyc access tools
   • Use Logicmoo's inference engines
@@ -1291,7 +1225,7 @@ Here is a sample PDDL plan to tackle a homelessness scenario.
 
 <pre>
 PDDL has major limitations, such as:
- 
+
   • Requiring perfect information
   • Inability to deal with uncertainty
   • Generally unable to sense or react outside of
@@ -1314,10 +1248,10 @@ note There are probably exceptions to some of these cited limitations.
 
 <pre>
 Some Metaplanners:
- 
+
   • Jason/SWIPL
   • PUCCINI
-  • TAEB/Planner 
+  • TAEB/Planner
   • BotHack
   • Logicmoo’s adv_axiom.pl
   • FLUX-FRDCSA
@@ -1510,7 +1444,7 @@ proprietary software cannot.
 
 <pre>
 Other Important FLP/FRDCSA systems:
- 
+
   • World State Monitor (WSM)
     • A digital twin
     • Has fluents editor, will learn which fluents
@@ -1532,7 +1466,7 @@ few ones related to this presentation.
 
 <pre>
 Need to develop FLP2:
- 
+
   • Need microtheory, multi-user, at-rest data
      encryption, HIPAA compliance, etc support
   • Need lazy loading of modules
@@ -1559,7 +1493,7 @@ Releasing FLP
 
 <pre>
 FLP project success is defined as:
- 
+
   • https://freelifeplanner.org
   • https://localhost:8443/flp
   • 1-800-GET-HELP
@@ -1578,7 +1512,7 @@ Defining FLP project success.
 
 <pre>
 Issues with releasing FLP:
- 
+
   • Inseparable from the FRDCSA system
   • FRDCSA hasn't been properly released
 </pre>
@@ -1603,7 +1537,7 @@ https://altruisticsoftware.org/frdcsa/
 
 ===
 
-The 'Formalized Research Database: Cluster, Study and Apply' Project.  
+The 'Formalized Research Database: Cluster, Study and Apply' Project.
 
 ---
 
@@ -1633,7 +1567,7 @@ I want to create a increasingly powerful 'weak AI'.
 
 <pre>
 FRDCSA Ontology Projects
- 
+
   • CO - Comprehensive Ontologies
   • CSO - Comprehensive Software Ontology
   • CLO - Comprehensive Library Ontology
@@ -1651,13 +1585,13 @@ development in FRDCSA.
 
 <pre>
 More FRDCSA Ontology Projects
- 
+
   • MKM project (Mathematical Knowledge Management) seeks
     to formalize mathematical knowledge within Cyc
   • Textbook Knowledge Formation: Really need dmiles'
     E2C program here
-  • Research-Ontology 
-  • Food-Ontology 
+  • Research-Ontology
+  • Food-Ontology
   • Reward-Ontology / Penalty-Ontology
   • ...
 </pre>
@@ -1667,7 +1601,7 @@ More FRDCSA Ontology Projects
 
 <pre>
 FRDCSA Project goals:
- 
+
   • ~400,000 project todo list items, need to be
     vetted and redacted
   • Move beyond 1-person effort
@@ -1689,7 +1623,7 @@ FRDCSA project is more fully specified by its many goals.
 
 <pre>
 More FRDCSA Project goals:
- 
+
   • Easier to change circumstances than minds
   • Mass adoption of FLP
   • Extensibility and configurability
@@ -1703,7 +1637,7 @@ More FRDCSA Project goals:
 
 <pre>
 Some actual mistakes the project has made:
- 
+
   • Written too much bespoke software
   • Not enough packages of other people's software
     • Mainly due to difficulty building the Packager
@@ -1730,7 +1664,7 @@ Releasing the FRDCSA
 
 <pre>
 Releasing FRDCSA:
- 
+
   • Haven't released full system due to personal data
     strewn throughout the repositories
     • Repositories are dozens of GB large,
@@ -1752,7 +1686,7 @@ Releasing FRDCSA.
 
 <pre>
 Releasing FRDCSA:
- 
+
   • Cannot demo most functionality because of private
     data
   • Massive technical debt and disorganization since
@@ -1766,7 +1700,7 @@ Releasing FRDCSA:
   • Someone to manage a nonprofit
     • Since I cannot
   • Need assistance, not instruction
-</pre>         
+</pre>
 
 ===
 ---
@@ -1774,7 +1708,7 @@ Releasing FRDCSA:
 Just recently, some interested collaborators have helped to motivate
 and push me to fast-track the FRDCSA (Panoply) release.  We've decided
 to make the outdated and redacted Panoply git codebases at
-https://github.com/aindilis the stable, only branch of FRDCSA.  
+https://github.com/aindilis the stable, only branch of FRDCSA.
 
 ---
 
@@ -1835,7 +1769,7 @@ Purpose of FRDCSA:
 The purpose of the FRD project is to create a universal database of
 all mathematical knowledge.  For instance, focused crawling and
 packaging all the software systems referenced by swMath.org.  CSA
-includes non-mathematical software systems. 
+includes non-mathematical software systems.
 
 ---
 
@@ -1853,7 +1787,7 @@ computational problems.
 
 <pre>
  Various kinds of computational problems:
- 
+
   • Decision Problem
   • Search Problem
   • Counting Problem
@@ -1966,7 +1900,7 @@ strong programs.
 ---
 
 FRDCSA 'Thesis' Part 2.A. (abductive):
- 
+
 One way to increase program strength is to collect software (in lieu
 of a better approach).
 
@@ -1987,7 +1921,7 @@ Here is a first try to formalize this.
 ---
 
 FRDCSA 'Thesis' Part 2.B. (abductive):
- 
+
 Given the extent of free software, packaging this software is a
 necessary step of any practical attempt by our group to increase our
 solution space.
@@ -2078,7 +2012,7 @@ cl-reversi - Reversi game for Common Lisp
 python-genetic - genetic algorithms in Python
 lebiniou - displays images that evolve with sound
 newlisp - LISP like, general purpose scripting language
-andrewdo@ai2:~$ 
+andrewdo@ai2:~$
 </pre>
 
 ===
@@ -2139,7 +2073,7 @@ can.
 <pre>
 Acknowledgements:
 Thanks to:
- 
+
   • dmiles
   • CasAm
   • jbalint
